@@ -55,11 +55,11 @@ def main() -> None:
 
         print("Valid space_station created:")
         print(f"ID: {broken_station.station_id}")
-        print(f"Name: {space_station.name}")
-        print(f"Crew: {space_station.crew_size} people")
-        print(f"Power: {space_station.power_level}%")
-        print(f"Oxygen: {space_station.oxygen_level}%")
-        if space_station.is_operational:
+        print(f"Name: {broken_station.name}")
+        print(f"Crew: {broken_station.crew_size} people")
+        print(f"Power: {broken_station.power_level}%")
+        print(f"Oxygen: {broken_station.oxygen_level}%")
+        if broken_station.is_operational:
             print("Status: Operational")
         else:
             print("Status: Not Operational")
