@@ -47,7 +47,10 @@ class SpaceMission(BaseModel):
                 raise ValueError("Error - Inactives members inside the crew")
         if leader is False:
             raise ValueError("Error - No commander or captain inside the crew")
-        if (experienced_crew / len(self.crew)) * 100 < 50.0:
+        if (
+            (experienced_crew / len(self.crew)) * 100 < 50.0 and
+            self.duration_days > 365
+           ):
             raise ValidationError("Error - Not enough experienced tripulation")
         return self
 
